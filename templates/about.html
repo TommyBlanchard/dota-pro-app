@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+	Interphase by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>DotA Pro</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.2.min.css" type="text/css" />
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel-layers.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/init.js') }}"></script>
+		<noscript>
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/style-xlarge.css') }}" />
+		</noscript>
+        
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.2.min.js"></script>
+    <script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+
+		<!-- Header -->
+        <header id="header">
+            <h1><a href="{{ url_for('index') }}">DotA Pro</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('heroes') }}">Hero Strengths</a></li>
+                    <li><a href="{{ url_for('predictin') }}">Predict</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major">
+						<h2>About</h2>
+					</header>
+
+					<!-- Text -->
+						<section>
+                            <p>DotA Pro was created as Tommy Blanchard's capstone project for <a href="https://www.thedataincubator.com/">The Data Incubator</a> program. A logistic regression model was trained on the results of hundreds of thousands of ranked DotA 2 matches, and will calculate the probability of winning based on input heros and lanes. </p>
+                            <p>The code for the modeling can be seen <a href="https://github.com/TommyBlanchard/dota-pro">here</a>, and the code for the app itself can be seen <a href="https://github.com/TommyBlanchard/dota-pro-app">here</a>.</p>
+                            <p>500GBs of data was taken from <a href='https://www.opendota.com/'>Open Dota</a> data dumps. This was parsed and processed using Python. The modeling was done using <a href="http://scikit-learn.org/stable/">scikit-learn</a> and visualizations created using <a href="http://bokeh.pydata.org/en/latest/">bokeh</a>. <a href="http://flask.pocoo.org/">Flask</a> was used as the framework.</p>
+
+
+
+	</body>
+</html>
